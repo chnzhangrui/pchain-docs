@@ -35,7 +35,7 @@ Outcome of the analysis chain, which is usually an upper limit that correspondin
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: Table of Contents
 
    create_workflow/main
 

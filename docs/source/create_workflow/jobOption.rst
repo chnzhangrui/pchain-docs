@@ -26,4 +26,4 @@ Instead, one could replace this line by the following lines (note that either ``
 
 
 So the job option is parametrised by the shell environment variable ``envMyHiggsMass``.
-This variable needs to be defined with proper values - you will learn how to do it in cwl_main_.
+This variable needs to be defined with proper values - you will learn how to do it in :ref:`cwl_main`.
