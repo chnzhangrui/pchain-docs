@@ -13,8 +13,8 @@ Its DAG (directed acyclic graph) scheme is illustrated in the figure below.
   :width: 800
   :alt: Schematic view of pchain loop workflow
 
-This DAG consists of three parts -- work_start (necessary configurations globally before entering the loop), work_loop (can be another subtask), work_end (final step when all loops are done).
-The loop body contains three steps -- top, bottom and checkpoint (also know as junction) steps.
+This DAG consists of three parts -- `work_start` (necessary configurations globally before entering the loop), `work_loop` (can be another subtask), `work_end` (final step when all loops are done).
+The loop body contains three steps -- `top`, `bottom` and `checkpoint` (also know as `junction`) steps.
 The junction step make a decision at the end of each loop of whether continue the loop or quit.
 When quit, the workflow will finish up with the work_end step.
 
@@ -36,8 +36,8 @@ In this section, we will focus on the production steps from MC jobOption to Deri
   :width: 800
   :alt: MC production steps
 
-The scheme (without loops) can be mapped to a sequential workflow (reference the top-bottom workflow).
-Here we put an active learning implementation for an ATLAS dark matter search in four-lepton final states [1]_
+The scheme (without loops) can be mapped to a sequential workflow (refer to the `top-bottom workflow`).
+Here we put an implementation for an ATLAS dark matter search (Z-dark) in four-lepton final states [1]_.
 
 .. _pchain_cwl_code:
 .. literalinclude:: ../../cwl/pchain/prod.cwl
@@ -45,19 +45,19 @@ Here we put an active learning implementation for an ATLAS dark matter search in
     :linenos:
     :caption: production sequence CWL
 
-Here we defined two local variables ``myparamMZD`` and ``myparamMHD`` at L5-10 and these values are used in L22 to assign these values to bash environment variables.
-Remember we discussed :ref:`jobOption`, so these values will be used there.
-We will put the jobOption file in ``999999/<jobOptioin.py>`` therefore ``--jobConfig=999999``.
+Here we defined two local variables ``myparamMZD`` and ``myparamMHD`` at **L5-10** and they are used in **L22** to assign values to bash environment variables.
+Remember we discussed in Section :ref:`jobOption` to use shell environment variables for certain parameters, so these values will be taken there.
+We will put the jobOption file in ``999999/<jobOptioin.py>`` locally when submitting the pchain task, therefore ``--jobConfig=999999``.
 The commands in ``opt_exec`` are standard ATLAS production commands; you could ask your MC production manager or check the bigPanda page.
-These commands requires Athena from ATLAS therefore each step contains ``opt_useAthenaPackages`` of true as in L25-26.
+These commands requires Athena from ATLAS, thus each step contains ``opt_useAthenaPackages`` of true as in **L25-26**, **L37-38**, **L49-50**, and **L61-62**.
 
 .. tip::
-   How to find commands from a prodtask page, eg `this request, <https://prodtask-dev.cern.ch/prodtask/inputlist_with_request/43259/>`_ (for ATLAS internal).
+   How to find commands from a prodtask page, eg `this request <https://prodtask-dev.cern.ch/prodtask/inputlist_with_request/43259/>`_ (for ATLAS internal).
 
-   - Click one of green boxes and navigated to a PanDA task page like https://bigpanda.cern.ch/task/28927633/;
+   - Click one of the green boxes and navigated to a PanDA task page like https://bigpanda.cern.ch/task/28927633/;
    - Click [Show jobs] -> [All (including retries)] and click one of the PanDA ID to go to a job page;
    - Click [Logs] -> [Log files] -> pilotlog.txt;
-   - Look for similar line as:
+   - Look for similar line as below and extract the command.
   
       >>> 2022-05-03 18:52:24,559 | INFO     | payload run command:...; Gen_tf.py --maxEvents=10000 --skipEvents=20000 --ecmEnergy=13000 --firstEvent=20001 --jobConfig=512443 --outputEVNTFile=EVNT.28927633._000003.pool.root.1 --randomSeed=3 --runNumber=512443 --AMITag=e8448;
 
