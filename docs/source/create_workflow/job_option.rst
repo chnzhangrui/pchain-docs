@@ -4,7 +4,7 @@
 Parametrise signal MC jobOption
 ------------------------------------------------
 You must have a jobOption script to generate the signal events you would like to study.
-This `repository <https://gitlab.cern.ch/atlas-physics/pmg/mcjoboptions>`_ stores ATLAS official MC jobOptions.
+This `repository <https://gitlab.cern.ch/atlas-physics/pmg/mcjoboptions>`_ stores ATLAS official MC jobOptions (accessible from ATLAS internal).
 Go and look for the one you want to perform active learning on, or ask your MC contact to provide it for you.
 
 In the official jobOption file, values of some key parameters are defined in the file, namely hardcoded.

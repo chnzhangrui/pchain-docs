@@ -9,7 +9,7 @@ They are
    :maxdepth: 2
 
 
-   jobOption
+   job_option
    cwl_main
    reana_workflow
    active_learning
