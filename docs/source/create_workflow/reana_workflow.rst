@@ -115,7 +115,7 @@ For example, here are the secretes you may need:
     userkey.pem        : **********
 
 
-All the rest mystery is in the ``script_reana.sh`` script, which takes a string of ``prod_ZZ`` and the DAOD name, and outputs ``output_from_reana.tar``.
+All the rest magic is in the ``script_reana.sh`` script, which takes a string of ``prod_ZZ`` and the DAOD name, and outputs ``output_from_reana.tar``.
 Let's peek what's inside this script.
 
 .. _pchain_script_reana:

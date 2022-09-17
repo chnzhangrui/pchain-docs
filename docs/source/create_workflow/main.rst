@@ -2,11 +2,11 @@
 
 Create your own workflow
 ==========================
-Four components are required to create an active learning workflow.
+Four components are required to create an active learning workflow for an analysis.
 They are
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
 
    job_option

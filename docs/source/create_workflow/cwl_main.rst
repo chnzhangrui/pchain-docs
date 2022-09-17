@@ -23,7 +23,7 @@ Here let's summarise a few key points:
 
     - CWL scripts can include other CWL scripts for better organisations; here we are more interested in ``loop_body.cwl``.
     - Local variables such as ``xxx``, ``yyy`` are defined in the ``input`` section with the ``param_`` prefix and their initial values. ``i`` is reserved as the counter of the loop and can be accessed via ``%{i}``.
-    - The checkpoint step which calls ``junction`` executor (a variant of ``prun``) must produce a json file called ``results.json`` that contains updated values for the local parameter dictionary and a special key-value pair of ``to_continue: True`` to indicate whether to continue or quit the loop.
+    - The checkpoint step which calls ``junction`` executable (a variant of ``prun``) must produce a json file called ``results.json`` that contains updated values for the local parameter dictionary and a special key-value pair of ``to_continue: True`` to indicate whether to continue or quit the loop.
     - It is possible to specify a file via ``--persistentFile`` in ``opt_args`` which cann be use as a persistent file to record complex information, for example to record the history of the results from active learning.
 
 Map to active learning steps
