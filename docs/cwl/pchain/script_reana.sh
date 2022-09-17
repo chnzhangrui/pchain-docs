@@ -19,7 +19,7 @@ export REANA_WORKON=$job_name
 echo "setup proxy for rucio:"
 reana-client secrets-add --overwrite --file ../userkey.pem --file ../usercert.pem --env VOMSPROXY_PASS=<your_own_pass> --env VONAME=atlas
 
-# delete the pem file from grid site after transferring to reana
+# delete the pem file from grid site after transferring to reana to be safe
 rm -f ../keytab ../usercert.pem ../userkey.pem
 
 reana-client upload

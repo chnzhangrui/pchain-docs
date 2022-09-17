@@ -6,7 +6,7 @@ Workflow description in CWL
 A workflow is a set of jobs with certain relationships.
 Using Common Workflow Language (CWL), one can describe various types of workflow, simple or complex.
 In the `PanDA Doc <https://panda-wms.readthedocs.io/en/latest/client/pchain.html#workflow-examples>`_ listed a lot of such examples with the CWL descriptive code.
-In the application of active learning, we will use the particular example of *Loops in workflows*.
+In the application of active learning, we will use the particular example *Loops in workflows*.
 Its DAG (directed acyclic graph) scheme is illustrated in the figure below.
 
 .. image:: ../../fig/pchain_dag_loop.png
@@ -31,6 +31,7 @@ Map to active learning steps
 The active learning can be easily mapped to this paradigm.
 Recall the schematic view of active learning loop.
 In this section, we will focus on the production steps from MC jobOption to Derivation, and discuss the later steps in next sections.
+We will only need the `work_loop` part and leave the `work_start` and `work_end` doing nothing interesting.
 
 .. image:: ../../fig/pchain_loop_production.jpg
   :width: 800
@@ -52,7 +53,7 @@ The commands in ``opt_exec`` are standard ATLAS production commands; you could a
 These commands requires Athena from ATLAS, thus each step contains ``opt_useAthenaPackages`` of true as in **L25-26**, **L37-38**, **L49-50**, and **L61-62**.
 
 .. tip::
-   How to find commands from a prodtask page, eg `this request <https://prodtask-dev.cern.ch/prodtask/inputlist_with_request/43259/>`_ (for ATLAS internal).
+   How to find commands from a prodtask page, e.g. `this request <https://prodtask-dev.cern.ch/prodtask/inputlist_with_request/43259/>`_ (for ATLAS internal).
 
    - Click one of the green boxes and navigated to a PanDA task page like https://bigpanda.cern.ch/task/28927633/;
    - Click [Show jobs] -> [All (including retries)] and click one of the PanDA ID to go to a job page;
