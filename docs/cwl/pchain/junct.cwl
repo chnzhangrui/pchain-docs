@@ -7,5 +7,5 @@
       opt_exec:
         default: "bash script_junction.sh %{i} %{DS0} %{myparamMZD} %{myparamMHD}"
       opt_args:
-        default: "--site CERN --outputs 'results.json,history.json' --persistentFile history.json --forceStaged"
+        default: "--site CERN --outputs results.json --persistentFile history.json --forceStaged"
     out: [outDS]
