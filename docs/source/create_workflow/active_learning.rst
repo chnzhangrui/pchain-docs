@@ -37,7 +37,7 @@ Integrate to pchain
 Below is the junction step in CWL.
 
 .. _pchain_cwl_code3:
-.. literalinclude:: ../../cwl/pchain/junct.cwl
+.. literalinclude:: ../../code/pchain/junct.cwl
     :language: yaml
     :linenos:
     :caption: Junction step in pchain
@@ -46,7 +46,7 @@ Again, all the magic is in the ``script_junction.sh`` script.
 Here is how it look like:
 
 .. _pchain_script_junction:
-.. literalinclude:: ../../cwl/pchain/script_junction.sh
+.. literalinclude:: ../../code/pchain/script_junction.sh
     :language: bash
     :linenos:
     :caption: script_junction.sh

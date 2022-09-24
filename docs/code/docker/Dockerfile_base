@@ -1,0 +1,11 @@
+FROM tensorflow/tensorflow:2.10.0
+LABEL maintainer="Rui Zhang (rui.zhang@cern.ch)"
+
+ARG PROJECT=myHOME
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git wget unzip bzip2 build-essential ca-certificates graphviz&& \
+    apt-get clean
+COPY . /$PROJECT
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r /$PROJECT/requirements.txt

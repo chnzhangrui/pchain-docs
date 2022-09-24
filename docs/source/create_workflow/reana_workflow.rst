@@ -101,7 +101,7 @@ To use this solution, we can simply to the following.
 We append following lines to the end of the :ref:`CWL code<pchain_cwl_code>` (continue in ``steps`` block as an additional step).
 
 .. _pchain_cwl_code2:
-.. literalinclude:: ../../cwl/pchain/reana.cwl
+.. literalinclude:: ../../code/pchain/reana.cwl
     :language: yaml
     :linenos:
     :caption: REANA step in pchain
@@ -133,7 +133,7 @@ All the rest magic is in the ``script_reana.sh`` script, which takes a string of
 Let's peek what's inside this script.
 
 .. _pchain_script_reana:
-.. literalinclude:: ../../cwl/pchain/script_reana.sh
+.. literalinclude:: ../../code/pchain/script_reana.sh
     :language: bash
     :linenos:
     :emphasize-lines: 11,12,32-40

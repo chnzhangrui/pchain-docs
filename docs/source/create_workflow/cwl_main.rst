@@ -41,7 +41,7 @@ The scheme (without loops) can be mapped to a sequential workflow (refer to the 
 Here we put an implementation for an ATLAS dark matter search (Z-dark) in four-lepton final states [1]_.
 
 .. _pchain_cwl_code:
-.. literalinclude:: ../../cwl/pchain/prod.cwl
+.. literalinclude:: ../../code/pchain/prod.cwl
     :language: yaml
     :linenos:
     :caption: production sequence CWL
